@@ -2,7 +2,7 @@ class HelloChatGpt < Formula
   include Language::Python::Virtualenv
 
   desc "A chatbot powered by GPT"
-  homepage "https://github.com/example/hello_chat_gpt"
+  homepage "https://github.com/jerryfans/hello_chat_gpt"
   url "https://github.com/example/hello_chat_gpt/archive/v1.0.0.tar.gz"
   sha256 "1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef"
 
@@ -15,7 +15,7 @@ class HelloChatGpt < Formula
   include Language::Python::Virtualenv
 
   desc "A chatbot powered by GPT"
-  homepage "https://github.com/example/hello_chat_gpt"
+  homepage "https://github.com/jerryfans/hello_chat_gpt"
   url "https://github.com/example/hello_chat_gpt/archive/v1.0.0.tar.gz"
   sha256 "1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef"
 
