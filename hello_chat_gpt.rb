@@ -3,7 +3,7 @@ class HelloChatGpt < Formula
 
   desc "A program with a command line way to chat with ChatGPT"
   homepage "https://github.com/jerryfans/hello_chat_gpt"
-  url "https://github.com/example/hello_chat_gpt/archive/v1.0.0.tar.gz"
+  url "https://github.com/JerryFans/hello_chat_gpt/raw/main/dist/hello_chat_gpt-1.0.0.tar.gz"
   sha256 "1f68d9a63dbfb4ee3d47ccc88bcab9bb68dbb54ba8ff2ae7789ab4d2d86061c4"
 
   depends_on "python@3.9"
