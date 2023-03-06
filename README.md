@@ -29,3 +29,5 @@ hello_chat_gpt -m Hello
 hello_chat_gpt --force-m '你好世界'
 
 ```
+
+![](https://github.com/JerryFans/hello_chat_gpt/raw/main/preview.jpg)
