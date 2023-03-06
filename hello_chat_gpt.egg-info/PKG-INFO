@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: hello-chat-gpt
+Version: 1.0.0
+Summary: A program with a command line way to chat with ChatGPT
+Home-page: https://github.com/jerryfans/hello_chat_gpt
+Author: JerryFnas
+Author-email: https://github.com/jerryfans
+License-File: LICENSE

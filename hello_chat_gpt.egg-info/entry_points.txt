@@ -1,0 +1,2 @@
+[console_scripts]
+hello_chat_gpt = hello_chat_gpt:main
