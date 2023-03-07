@@ -1,17 +1,23 @@
 class HelloChatGpt < Formula
-  include Language::Python::Virtualenv
+  desc "A command-line tool that generates chat responses using OpenAI's GPT model."
+  homepage "https://github.com/JerryFans/hello_chat_gpt"
+  url "https://github.com/JerryFans/hello_chat_gpt/raw/main/release/v1.0/hello_chat_gpt_intel"
+  sha256 "ace62092ac76b7c25caca467ff71e1300b68ba023f8c55f45956eb6dc20a06fc"
 
-  desc "A program with a command line way to chat with ChatGPT"
-  homepage "https://github.com/jerryfans/hello_chat_gpt"
-  url "https://github.com/JerryFans/hello_chat_gpt/raw/main/dist/1.0.0/hello_chat_gpt-1.0.0.tar.gz"
-  sha256 "99aac8eaeb363485df39d4a6796307d98f260ce5a2b42fd2769bff04e3632843"
+  if Hardware::CPU.arm?
+    url "https://github.com/JerryFans/hello_chat_gpt/raw/main/release/v1.0/hello_chat_gpt_m1"
+    sha256 "5befc858818e46afda39edcee30d70c96d339bbf2ef73d83fb16b0e91747bb6d"
+  end
 
   def install
-    bin.install "hello_chat_gpt"
+    if Hardware::CPU.arm?
+      bin.install "hello_chat_gpt_m1" => "hello_chat_gpt"
+    else
+      bin.install "hello_chat_gpt_intel" => "hello_chat_gpt"
+    end
   end
 
   test do
-    assert_match "Hello, world!", shell_output("#{bin}/hello_chat_gpt")
+    system "#{bin}/hello_chat_gpt", "--help"
   end
 end
-

@@ -4,21 +4,23 @@ import json
 import os
 import pickle
 import tempfile
-
 import requests
+import sys
 
 
 def main():
     #message force_m
-    api_key=os.getenv('ENV_CHAT_GPT_API_KEY')
-    if api_key == None:
-      print('Not have ChatGpt ApiKey , please set your api key in .zshrc or .bash_profile like export ENV_CHAT_GPT_API_KEY= \"Your Chat GPT Api Key\"')
-      exit(0)
-    parser = argparse.ArgumentParser(description='A program with a command line way to chat with ChatGPT. Use gpt-3.5-turbo Model Api.')
+    
+    parser = argparse.ArgumentParser(description='A program with a command line way to chat with ChatGPT, Use gpt-3.5-turbo Model Api. ')
     parser.add_argument('-m', '--message', default='Hello', help='chat content you want to send to ChatGPT (Will be continue with previous conversation)')
     parser.add_argument('--force-m', '--new_message', help='send message as a new conversation')
 
     args = parser.parse_args()
+
+    api_key=os.getenv('ENV_CHAT_GPT_API_KEY')
+    if api_key == None:
+      print('Not have ChatGpt ApiKey , please set your api key in .zshrc or .bash_profile like export ENV_CHAT_GPT_API_KEY= \"Your Chat GPT Api Key\"')
+      sys.exit(0)
 
     tmp_path= tempfile.gettempdir()
     tmp_file_path= tmp_path + '/previous_result_1.pkl'
@@ -49,17 +51,7 @@ def main():
     }
 
     body=json.dumps(data)
-
-    # print(body)
-
-    # conn = http.client.HTTPSConnection(url)
-    # conn.timeout = 15.0
-    # conn.request('POST','/v1/chat/completions',body,headers)
-    
-    # 发起POST请求
-    # response = conn.getresponse()
-    response=requests.post(url, data=body,headers=headers,timeout=10.0)
-    # 处理响应
+    response=requests.post(url, data=body,headers=headers,timeout=120.0)
     if response.status_code == 200:
        success_result=json.loads(response.text)
        if 'choices' in success_result.keys():
