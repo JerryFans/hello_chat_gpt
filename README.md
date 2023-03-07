@@ -8,7 +8,12 @@ install
 ```
 
 brew tap jerryfans/hello_chat_gpt
+
+#intel mac
 brew install hello_chat_gpt
+
+#arm mac
+arch -arm64 brew install hello_chat_gpt
 
 ```
 go to "https://platform.openai.com/account/api-keys" generate your ApiKey and export your ChatGPT ApiKey to .zshrc or .bash_profile like
