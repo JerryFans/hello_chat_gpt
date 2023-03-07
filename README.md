@@ -9,10 +9,10 @@ install
 
 brew tap jerryfans/hello_chat_gpt
 
-#intel mac
+#intel Mac machine
 brew install hello_chat_gpt
 
-#arm mac
+#arm(m1 m2) Mac machine
 arch -arm64 brew install hello_chat_gpt
 
 ```
