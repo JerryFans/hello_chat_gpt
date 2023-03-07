@@ -3,6 +3,12 @@ A program with a command line way to chat with ChatGPT. Use gpt-3.5-turbo Model 
 
 # Usage
 
+## Platform Support
+
+| Intel macOS | Apple Silicon macOS | Windows |
+| :---: | :---: | :-----: |
+|   ✔️   |   ✔️   |    ➖  |
+
 install
 
 ```
