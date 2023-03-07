@@ -10,8 +10,7 @@ install
 brew install hello_chat_gpt
 
 ```
-
-export your ChatGPT ApiKey to .zshrc or .bash_profile like
+go to "https://platform.openai.com/account/api-keys" generate your ApiKey and export your ChatGPT ApiKey to .zshrc or .bash_profile like
 
 ```
 
