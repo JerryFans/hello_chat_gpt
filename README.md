@@ -1,6 +1,8 @@
 # hello_chat_gpt
 A program with a command line way to chat with ChatGPT. Use gpt-3.5-turbo Model Api.
 
+![](https://github.com/JerryFans/hello_chat_gpt/raw/main/preview1.jpg)
+
 # Usage
 
 ## Platform Support
@@ -40,5 +42,3 @@ hello_chat_gpt -m Hello
 hello_chat_gpt --force-m '你好世界'
 
 ```
-
-![](https://github.com/JerryFans/hello_chat_gpt/raw/main/preview.jpg)
