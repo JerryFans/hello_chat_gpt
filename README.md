@@ -7,6 +7,7 @@ install
 
 ```
 
+brew tap jerryfans/hello_chat_gpt
 brew install hello_chat_gpt
 
 ```
